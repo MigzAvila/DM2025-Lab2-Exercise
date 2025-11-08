@@ -1,0 +1,325 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+Reviews
+Demon Slayer: Kimetsu no Yaiba
+Infinity Castle
+ACTION
+156 minutes ‧ R ‧ 2025
+Toussaint Egan
+September 26, 2025
+4 min read
+If you’ve paid even the slightest bit
+of attention to Japanese anime in
+the past five years, you’ve no doubt
+heard of “Demon Slayer: Kimetsu no
+Yaiba” at some point. Since its
+premiere in spring 2019, the dark
+fantasy anime (based on Koyoharu
+Gotouge’s 2016 original manga) has
+amassed a dedicated worldwide fanbase along with massive commercial success.
+SIGNUP
+&quot;&quot;&quot;
+
+**Page 2**
+&quot;&quot;&quot;
+The first feature-length film in the series, “Demon Slayer: Kimetsu no Yaiba
+Mugen Train,” opened in theaters and defied the odds to become the <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">highest-
+grossing film of 2020</span>, amassing over $506 million in a year wracked by a global
+pandemic that throttled box office revenue worldwide. Now, after five years and
+four subsequent seasons of television, the anime has returned to theaters, this
+time with the first in a trilogy of films set to adapt the manga’s <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">climactic final arc</span>,
+and the <span class="lx-highlight" data-idx="2" style="background-color:#D2E3FC;">audiences have once again returned in record numbers</span>.
+Picking up immediately after the cliffhanger ending of the anime’s fourth season,
+“Demon Slayer: Kimetsu no Yaiba Infinity Castle” follows protagonist Tanjiro
+Kamado and his Hashira allies—the most formidable warriors in the Demon
+Slayer Corps—as they are ensnared in a trap laid by Muzan Kibutsuji, the quasi-
+immortal King of Demons and Tanjiro’s nemesis. Mere moments from being
+defeated, Muzan teleports Tanjiro, along with every member of the Demon Slayer
+Corps, into the impossible, recursive depths of his stronghold, the titular Infinity
+Castle. Beset by hordes of ravenous, man-eating demons led by Muzan’s
+lieutenants, and bewildered by this non-Euclidean pocket dimension, Tanjiro and
+his allies must regain their footing and fight for their lives as they make one last
+stand to defeat Muzan once and for all.
+As you can probably gather from that description, “Infinity Castle” <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">doesn’t spend
+much of its runtime on exposition</span>, <span class="lx-highlight" data-idx="4" style="background-color:#D2E3FC;">presuming that the audience has already been
+following the television series up to this point</span>. While this is <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">hardly an obstacle for,
+say, a Demon Slayer diehard</span>, it does mean that <span class="lx-highlight" data-idx="6" style="background-color:#D2E3FC;">you’ll likely be at a loss as to the
+importance of certain characters</span> like Kagaya Ubuyashiki, the late patriarch of the
+Demon Slayer Corps, if this is your first foray in the series. Despite this, “Infinity
+Castle” <span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">does a fairly serviceable job of bringing audiences up to speed on the most
+pertinent of character backstories</span>. That said, the story of “Demon Slayer: Kimetsu
+no Yaiba” <span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">has never been the real draw of the series’ appeal</span>. Instead, that would
+be its animation, more specifically its action sequences, brought to life by the
+team of animators at Japanese animation house Ufotable lead by Haruo Sotozaki
+(2002’s “X,” 2007’s “Tales of Symphonia: The Animation”), who has directed
+SIGNUP
+&quot;&quot;&quot;
+
+**Page 3**
+&quot;&quot;&quot;
+every season of the television anime to date, including the aforementioned
+“Mugen Train.”
+Since its first airing, the most common accolade paid to “Demon Slayer: Kimetsu
+no Yaiba” has been towards <span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">Ufotable’s distinctive approach to the anime’s
+plentiful fight scenes</span>, which <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">seamlessly blend traditional 2D animation with 3D-
+rendered backgrounds</span>, enabling animators to compose shots using digital camera
+movements. The result is <span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">a flurry of dynamic action sequences with energetic
+movement and cinematic compositing</span> that would otherwise be costly or
+cumbersome (if not downright impossible) to pull off with 2D animation alone.
+While Ufotable first honed its trademark action sequences through its work on
+2011’s “Fate/Zero” and 2014’s “Fate/stay night: Unlimited Blade Works,” it wasn’t
+until “Demon Slayer: Kimetsu no Yaiba” that the studio’s approach to action
+began to reach a wider mainstream audience.
+Bearing that in mind, “Infinity Castle” is <span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">a perfect showcase of Ufotable’s house
+style blend of 2D and 3D animation</span>. <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">The lamplit rooms, yawning wooden
+hallways, and endless shifting corridors of the Infinity Castle resemble the Mirror
+Dimension from Scott Derrickson’s “Doctor Strange” by way of the Tesseract from
+Christopher Nolan’s “Interstellar,” constantly rearranging themselves into ever
+more bewildering configurations.</span> It’s <span class="lx-highlight" data-idx="14" style="background-color:#D2E3FC;">an exhilarating setting for the film’s fight
+scenes</span>, which see each of the Hashira facing off with one of Muzan’s “Upper
+Rank” lieutenants as they attempt to hunt down the Demon King himself.
+In keeping with the theme of compassion evident throughout the entire series,
+“Infinity Castle” dedicates significant time to exploring the backstories of its
+antagonists, probing the instigating moment in their respective lives that
+compelled them to allow Muzan to transform them into demons in the first place.
+This results in emotionally charged scenes that, no matter how over-the-top or
+ghoulish Muzan’s lieutenants might appear at first, underscore the vulnerability
+and inherent tragedy underlying their malevolent actions. 
+SIGNUP
+&quot;&quot;&quot;
+
+**Page 4**
+&quot;&quot;&quot;
+“Demon Slayer: Kimetsu no Yaiba Infinity Castle” is <span class="lx-highlight" data-idx="15" style="background-color:#C8E6C9;">a flashy, frenetic, and
+thoroughly entertaining action anime</span> that <span class="lx-highlight" data-idx="16" style="background-color:#C8E6C9;">delivers on both a visual and emotional
+level</span>. Even barring some explanation of the greater journey preceding its events,
+it’s <span class="lx-highlight" data-idx="17" style="background-color:#C8E6C9;">an astoundingly beautiful display of the combined talents of Ufotable’s staff of
+animators and Sotozaki’s meticulous direction</span>. If the next two installments in the
+Infinity Castle trilogy <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">can meet, let alone raise the bar set by this entry</span>, both fans
+of Demon Slayers and animation aficionados alike <span class="lx-highlight" data-idx="19" style="background-color:#D2E3FC;">have much to look forward to</span>.
+Now streaming on:
+Unfortunately, we couldn&#x27;t find any streaming offers for Demon Slayer: Kimetsu no Yaiba Infinity Castle.
+Powered by
+Toussaint Egan
+Toussaint Egan is a culturally omnivorous writer and critic with over a
+decade of experience writing on games, animation, film, and more for
+publications such as The A.V. Club, Cartoon Brew, Paste, and
+RogerEbert.com. His favorite artists are James Jean, Tsutomu Nihei,
+François Schuiten, Jean Giraud, and Ivan Aivazovsky. You can find
+him on Bluesky.
+Demon
+Slayer:
+Kimetsu
+no Yaiba
+Infinity
+Castle
+ACTION
+Cast
+Natsuki Hanae as
+Tanjiro Kamado (voice)
+Hiro Shimono as
+Zenitsu Agatsuma
+(voice)
+Takahiro Sakurai as
+Giyu Tomioka (voice)
+Akira Ishida as Akaza
+(voice)
+Yoshitsugu Matsuoka
+as Inosuke Hashibira
+Director
+Haruo Sotozaki
+Screenplay
+Hikaru Kondô
+Koyoharu Gotouge
+SIGNUP
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="19" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/20</span> |
+          Pos <span id="posInfo">[671-701]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "highest-grossing film of 2020", "color": "#C8E6C9", "startPos": 671, "endPos": 701, "beforeText": "*\n&quot;&quot;&quot;\nThe first feature-length film in the series, \u201cDemon Slayer: Kimetsu no Yaiba\nMugen Train,\u201d opened in theaters and defied the odds to become the ", "extractionText": "highest-\ngrossing film of 2020", "afterText": ", amassing over $506 million in a year wracked by a global\npandemic that throttled box office revenue worldwide. Now, after five years and\nfour subseq", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The first feature-length film in the series, \u201cDemon Slayer: Kimetsu no Yaiba Mugen Train,\u201d</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">highest-grossing</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "climactic final arc", "color": "#C8E6C9", "startPos": 987, "endPos": 1006, "beforeText": "nd\nfour subsequent seasons of television, the anime has returned to theaters, this\ntime with the first in a trilogy of films set to adapt the manga\u2019s ", "extractionText": "climactic final arc", "afterText": ",\nand the audiences have once again returned in record numbers.\nPicking up immediately after the cliffhanger ending of the anime\u2019s fourth season,\n\u201cDem", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the manga\u2019s</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">climactic final</span>}</div>"}, {"index": 2, "class": "audience_impact", "text": "audiences have once again returned in record numbers", "color": "#D2E3FC", "startPos": 1016, "endPos": 1068, "beforeText": " television, the anime has returned to theaters, this\ntime with the first in a trilogy of films set to adapt the manga\u2019s climactic final arc,\nand the ", "extractionText": "audiences have once again returned in record numbers", "afterText": ".\nPicking up immediately after the cliffhanger ending of the anime\u2019s fourth season,\n\u201cDemon Slayer: Kimetsu no Yaiba Infinity Castle\u201d follows protagoni", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">enthusiasm, excitement</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">the return of the anime trilogy</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">audiences</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "doesn\u2019t spend much of its runtime on exposition", "color": "#C8E6C9", "startPos": 1959, "endPos": 2006, "beforeText": "ght for their lives as they make one last\nstand to defeat Muzan once and for all.\nAs you can probably gather from that description, \u201cInfinity Castle\u201d ", "extractionText": "doesn\u2019t spend\nmuch of its runtime on exposition", "afterText": ", presuming that the audience has already been\nfollowing the television series up to this point. While this is hardly an obstacle for,\nsay, a Demon Sl", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Infinity Castle</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">doesn\u2019t spend much of its runtime on exposition</span>}</div>"}, {"index": 4, "class": "audience_impact", "text": "presuming that the audience has already been following the television series up to this point", "color": "#D2E3FC", "startPos": 2008, "endPos": 2101, "beforeText": "o defeat Muzan once and for all.\nAs you can probably gather from that description, \u201cInfinity Castle\u201d doesn\u2019t spend\nmuch of its runtime on exposition, ", "extractionText": "presuming that the audience has already been\nfollowing the television series up to this point", "afterText": ". While this is hardly an obstacle for,\nsay, a Demon Slayer diehard, it does mean that you\u2019ll likely be at a loss as to the\nimportance of certain char", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">confused, disoriented</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">lack of exposition</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">new viewers</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "hardly an obstacle for, say, a Demon Slayer diehard", "color": "#C8E6C9", "startPos": 2117, "endPos": 2168, "beforeText": "spend\nmuch of its runtime on exposition, presuming that the audience has already been\nfollowing the television series up to this point. While this is ", "extractionText": "hardly an obstacle for,\nsay, a Demon Slayer diehard", "afterText": ", it does mean that you\u2019ll likely be at a loss as to the\nimportance of certain characters like Kagaya Ubuyashiki, the late patriarch of the\nDemon Slay", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">lack of exposition</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">hardly an obstacle</span>}</div>"}, {"index": 6, "class": "audience_impact", "text": "you\u2019ll likely be at a loss as to the importance of certain characters", "color": "#D2E3FC", "startPos": 2188, "endPos": 2257, "beforeText": "s already been\nfollowing the television series up to this point. While this is hardly an obstacle for,\nsay, a Demon Slayer diehard, it does mean that ", "extractionText": "you\u2019ll likely be at a loss as to the\nimportance of certain characters", "afterText": " like Kagaya Ubuyashiki, the late patriarch of the\nDemon Slayer Corps, if this is your first foray in the series. Despite this, \u201cInfinity\nCastle\u201d does", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">confused, disoriented</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">lack of exposition</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">new viewers</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "does a fairly serviceable job of bringing audiences up to speed on the most pertinent of character backstories", "color": "#C8E6C9", "startPos": 2403, "endPos": 2513, "beforeText": "ters like Kagaya Ubuyashiki, the late patriarch of the\nDemon Slayer Corps, if this is your first foray in the series. Despite this, \u201cInfinity\nCastle\u201d ", "extractionText": "does a fairly serviceable job of bringing audiences up to speed on the most\npertinent of character backstories", "afterText": ". That said, the story of \u201cDemon Slayer: Kimetsu\nno Yaiba\u201d has never been the real draw of the series\u2019 appeal. Instead, that would\nbe its animation, m", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Infinity Castle</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">fairly serviceable job</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "has never been the real draw of the series\u2019 appeal", "color": "#C8E6C9", "startPos": 2572, "endPos": 2622, "beforeText": "ceable job of bringing audiences up to speed on the most\npertinent of character backstories. That said, the story of \u201cDemon Slayer: Kimetsu\nno Yaiba\u201d ", "extractionText": "has never been the real draw of the series\u2019 appeal", "afterText": ". Instead, that would\nbe its animation, more specifically its action sequences, brought to life by the\nteam of animators at Japanese animation house U", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The story of Demon Slayer: Kimetsu no Yaiba</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">never been the real draw</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "Ufotable\u2019s distinctive approach to the anime\u2019s plentiful fight scenes", "color": "#C8E6C9", "startPos": 3102, "endPos": 3171, "beforeText": "ncluding the aforementioned\n\u201cMugen Train.\u201d\nSince its first airing, the most common accolade paid to \u201cDemon Slayer: Kimetsu\nno Yaiba\u201d has been towards ", "extractionText": "Ufotable\u2019s distinctive approach to the anime\u2019s\nplentiful fight scenes", "afterText": ", which seamlessly blend traditional 2D animation with 3D-\nrendered backgrounds, enabling animators to compose shots using digital camera\nmovements. T", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The anime&#x27;s fight scenes</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">distinctive approach</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "seamlessly blend traditional 2D animation with 3D-rendered backgrounds", "color": "#C8E6C9", "startPos": 3179, "endPos": 3250, "beforeText": "ommon accolade paid to \u201cDemon Slayer: Kimetsu\nno Yaiba\u201d has been towards Ufotable\u2019s distinctive approach to the anime\u2019s\nplentiful fight scenes, which ", "extractionText": "seamlessly blend traditional 2D animation with 3D-\nrendered backgrounds", "afterText": ", enabling animators to compose shots using digital camera\nmovements. The result is a flurry of dynamic action sequences with energetic\nmovement and c", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The animation technique</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">seamlessly blend</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "a flurry of dynamic action sequences with energetic movement and cinematic compositing", "color": "#C8E6C9", "startPos": 3334, "endPos": 3420, "beforeText": "essly blend traditional 2D animation with 3D-\nrendered backgrounds, enabling animators to compose shots using digital camera\nmovements. The result is ", "extractionText": "a flurry of dynamic action sequences with energetic\nmovement and cinematic compositing", "afterText": " that would otherwise be costly or\ncumbersome (if not downright impossible) to pull off with 2D animation alone.\nWhile Ufotable first honed its tradem", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The action sequences</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">dynamic action sequences</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "a perfect showcase of Ufotable\u2019s house style blend of 2D and 3D animation", "color": "#C8E6C9", "startPos": 3856, "endPos": 3929, "beforeText": "Slayer: Kimetsu no Yaiba\u201d that the studio\u2019s approach to action\nbegan to reach a wider mainstream audience.\nBearing that in mind, \u201cInfinity Castle\u201d is ", "extractionText": "a perfect showcase of Ufotable\u2019s house\nstyle blend of 2D and 3D animation", "afterText": ". The lamplit rooms, yawning wooden\nhallways, and endless shifting corridors of the Infinity Castle resemble the Mirror\nDimension from Scott Derrickso", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Infinity Castle</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">perfect showcase</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "The lamplit rooms, yawning wooden hallways, and endless shifting corridors of the Infinity Castle resemble the Mirror Dimension from Scott Derrickson\u2019s \u201cDoctor Strange\u201d by way of the Tesseract from Christopher Nolan\u2019s \u201cInterstellar,\u201d constantly rearranging themselves into ever more bewildering configurations.", "color": "#C8E6C9", "startPos": 3931, "endPos": 4241, "beforeText": "ch a wider mainstream audience.\nBearing that in mind, \u201cInfinity Castle\u201d is a perfect showcase of Ufotable\u2019s house\nstyle blend of 2D and 3D animation. ", "extractionText": "The lamplit rooms, yawning wooden\nhallways, and endless shifting corridors of the Infinity Castle resemble the Mirror\nDimension from Scott Derrickson\u2019s \u201cDoctor Strange\u201d by way of the Tesseract from\nChristopher Nolan\u2019s \u201cInterstellar,\u201d constantly rearranging themselves into ever\nmore bewildering configurations.", "afterText": " It\u2019s an exhilarating setting for the film\u2019s fight\nscenes, which see each of the Hashira facing off with one of Muzan\u2019s \u201cUpper\nRank\u201d lieutenants as th", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Infinity Castle setting</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">bewildering configurations</span>}</div>"}, {"index": 14, "class": "audience_impact", "text": "an exhilarating setting for the film\u2019s fight scenes", "color": "#D2E3FC", "startPos": 4247, "endPos": 4298, "beforeText": "e\u201d by way of the Tesseract from\nChristopher Nolan\u2019s \u201cInterstellar,\u201d constantly rearranging themselves into ever\nmore bewildering configurations. It\u2019s ", "extractionText": "an exhilarating setting for the film\u2019s fight\nscenes", "afterText": ", which see each of the Hashira facing off with one of Muzan\u2019s \u201cUpper\nRank\u201d lieutenants as they attempt to hunt down the Demon King himself.\nIn keepin", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">exhilaration</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The Infinity Castle setting</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "a flashy, frenetic, and thoroughly entertaining action anime", "color": "#C8E6C9", "startPos": 5051, "endPos": 5111, "beforeText": "lnerability\nand inherent tragedy underlying their malevolent actions.\u00a0\nSIGNUP\n&quot;&quot;&quot;\n\n**Page 4**\n&quot;&quot;&quot;\n\u201cDemon Slayer: Kimetsu no Yaiba Infinity Castle\u201d is ", "extractionText": "a flashy, frenetic, and\nthoroughly entertaining action anime", "afterText": " that delivers on both a visual and emotional\nlevel. Even barring some explanation of the greater journey preceding its events,\nit\u2019s an astoundingly b", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Demon Slayer: Kimetsu no Yaiba Infinity Castle</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">flashy, frenetic, and thoroughly entertaining</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "delivers on both a visual and emotional level", "color": "#C8E6C9", "startPos": 5117, "endPos": 5162, "beforeText": "ns.\u00a0\nSIGNUP\n&quot;&quot;&quot;\n\n**Page 4**\n&quot;&quot;&quot;\n\u201cDemon Slayer: Kimetsu no Yaiba Infinity Castle\u201d is a flashy, frenetic, and\nthoroughly entertaining action anime that ", "extractionText": "delivers on both a visual and emotional\nlevel", "afterText": ". Even barring some explanation of the greater journey preceding its events,\nit\u2019s an astoundingly beautiful display of the combined talents of Ufotabl", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Demon Slayer: Kimetsu no Yaiba Infinity Castle</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">delivers on both a visual and emotional level</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "an astoundingly beautiful display of the combined talents of Ufotable\u2019s staff of animators and Sotozaki\u2019s meticulous direction", "color": "#C8E6C9", "startPos": 5244, "endPos": 5370, "beforeText": "ning action anime that delivers on both a visual and emotional\nlevel. Even barring some explanation of the greater journey preceding its events,\nit\u2019s ", "extractionText": "an astoundingly beautiful display of the combined talents of Ufotable\u2019s staff of\nanimators and Sotozaki\u2019s meticulous direction", "afterText": ". If the next two installments in the\nInfinity Castle trilogy can meet, let alone raise the bar set by this entry, both fans\nof Demon Slayers and anim", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Demon Slayer: Kimetsu no Yaiba Infinity Castle</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">astoundingly beautiful display</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "can meet, let alone raise the bar set by this entry", "color": "#C8E6C9", "startPos": 5432, "endPos": 5483, "beforeText": "he combined talents of Ufotable\u2019s staff of\nanimators and Sotozaki\u2019s meticulous direction. If the next two installments in the\nInfinity Castle trilogy ", "extractionText": "can meet, let alone raise the bar set by this entry", "afterText": ", both fans\nof Demon Slayers and animation aficionados alike have much to look forward to.\nNow streaming on:\nUnfortunately, we couldn&#x27;t find any strea", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Infinity Castle trilogy</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">raise the bar</span>}</div>"}, {"index": 19, "class": "audience_impact", "text": "have much to look forward to", "color": "#D2E3FC", "startPos": 5544, "endPos": 5572, "beforeText": "lments in the\nInfinity Castle trilogy can meet, let alone raise the bar set by this entry, both fans\nof Demon Slayers and animation aficionados alike ", "extractionText": "have much to look forward to", "afterText": ".\nNow streaming on:\nUnfortunately, we couldn&#x27;t find any streaming offers for Demon Slayer: Kimetsu no Yaiba Infinity Castle.\nPowered by\nToussaint Egan", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">anticipation, excitement</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">Infinity Castle trilogy</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">fans of Demon Slayers and animation aficionados alike</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
