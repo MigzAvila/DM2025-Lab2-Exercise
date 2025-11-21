@@ -1,0 +1,58 @@
+{
+    "title": "Types of Attributes",
+    "video_segment": "78:00 - 82:59",
+    "key_points": [
+        "Data preprocessing is crucial and time-consuming, often requiring hands-on experience.",
+        "Data is the most important part of the whole process in data mining.",
+        "Most data comes from databases, specifically relational databases which use tables.",
+        "Attributes are columns in a table, and rows represent transactions or records.",
+        "There are four main types of attributes: Nominal, Ordinal, Interval, and Ratio.",
+        "Nominal attributes are categorical and only allow equality comparisons.",
+        "Ordinal attributes allow for order comparisons (e.g., rank order).",
+        "Interval attributes allow for addition and subtraction, but not multiplication/division.",
+        "Ratio attributes allow for all arithmetic operations (addition, subtraction, multiplication, division)."
+    ],
+    "content_flow": [
+        {
+            "content_type": "transcript_segment",
+            "text": "It doesn't matter when you do the quizzes in NTU cool anytime as long as within the deadline. Is this the first class lottery? I haven't received the NTU cool account registration email. Is there anything I need to do?",
+            "timestamp": "78:00"
+        },
+        {
+            "content_type": "transcript_segment",
+            "text": "very difficult. That is why I want to prepare you to become not just like a novice. I hope afterwards you can more like a senior who actually experienced this thing. And so because of it, we have a lot of requirement and then they're very different from other courses because you are in a very difficult time. When you start to work, I'm about to retire. And I'm like, good luck. Okay, so then I already finished about the introduction about the data mining. Next one for the maybe next five hour, I need to talking about the data. And the most important part for the processing part. Most of them will be covered today and next week. Okay. You might say, professor, processing actually consume like 50% of the time and or like 80% depends on how you see them. Why in data mining courses, we don't actually cover so much lecture about preprocessing because that is still very difficult to train. So lecture. You need to have hands on experience. All the lab and all the project need hands on experience for you to know how to train them. And good part is we have the final project and we have the progress report. And since you do not have the possibility to try on so many different thing. Luckily, you have classmate. All participate in this class. So when they try something, you gain the information more. That part we designed the whole class activity.",
+            "timestamp": "78:01"
+        },
+        {
+            "content_type": "slide_description",
+            "text": "Data: The most important part in the whole process"
+        },
+        {
+            "content_type": "transcript_segment",
+            "text": "What is Data? Collection of data objects and their attributes. An attribute is a property or characteristic of an object. A collection of attributes also describes an object. Object is also known as record, point, case, sample, entity, or tuple. So every row right here is related to record.",
+            "timestamp": "80:00"
+        },
+        {
+            "content_type": "transcript_segment",
+            "text": "When you mentioned about data, you need to know most of data comes from database. Currently, database still utilize relational database. When we told relational database is because they were having table. We call them relation. In the table, we have attribute. Each column of them are attribute. Each row we call them transaction or record. Depends on how you try to do that. Transaction is more for database. Turn saying that how many record tuple you can relate to it. You have the tuple or you can talking about point. So every row right here is related to record.",
+            "timestamp": "80:02"
+        },
+        {
+            "content_type": "slide_description",
+            "text": "What is Data?\n- Collection of data objects and their attributes\n- An attribute is a property or characteristic of an object\n- A collection of attributes also describes an object\n- Object is also known as record, point, case, sample, tuple, or instance"
+        },
+        {
+            "content_type": "transcript_segment",
+            "text": "And then right here, we want to talking about type of attribute. There are different types of attributes. By the way, the type right here is not data type. In computer science, if you learn data structure, you will have data type. But it is not data type. We are talking about different. So we have four different type: Nominal, Ordinal, Interval, and Ratio. And the ratio. How we partition those attribute depends on the operation that you are allowed to do. Okay. And then their data type right here. Nominal is the one you can do last operation. Ratio is the one you can do all the operation that including nominal, ordinal, interval. Okay. So it depends on how many operation you can working with. Here is another table. So then you can see that one is from minus to plus. So for each one of them, so nominal data, you can only comparison equal or not equal. We call them categorical operation that only working on categorical data. Ordinal data, you can do comparison that including equal, not equal, less than, greater than. Interval data, you can do comparison that including equal, not equal, less than, greater than, and also addition and subtraction. Ratio data, you can do all the operation that including nominal, ordinal, interval. Okay.",
+            "timestamp": "80:50"
+        },
+        {
+            "content_type": "slide_description",
+            "text": "Types of Attributes\n- There are different types of attributes"
+        },
+        {
+            "content_type": "slide_description",
+            "text": "Categorical (=, !=)\nRank Order (<=, >=)\nInterval (+, -)\nProportional (x, /)\nTrue Zero"
+        }
+    ]
+}

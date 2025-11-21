@@ -1,0 +1,227 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">key_concept</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        # LECTURE ANALYSIS: Types of Attributes
+## Video Segment: 78:00 - 82:59
+
+[TRANSCRIPT - 78:00]
+It doesn&#x27;t matter when you do the quizzes in NTU cool anytime as long as within the deadline. Is this the first class lottery? I haven&#x27;t received the NTU cool account registration email. Is there anything I need to do?
+
+[TRANSCRIPT - 78:01]
+very difficult. That is why I want to prepare you to become not just like a novice. I hope afterwards you can more like a senior who actually experienced this thing. And so because of it, we have a lot of requirement and then they&#x27;re very different from other courses because you are in a very difficult time. When you start to work, I&#x27;m about to retire. And I&#x27;m like, good luck. Okay, so then I already finished about the introduction about the data mining. Next one for the maybe next five hour, I need to talking about the data. And the most important part for the processing part. Most of them will be covered today and next week. Okay. You might say, professor, processing actually consume like 50% of the time and or like 80% depends on how you see them. Why in data mining courses, we don&#x27;t actually cover so much lecture about preprocessing because that is still very difficult to train. So lecture. You need to have hands on experience. All the lab and all the project need hands on experience for you to know how to train them. And good part is we have the final project and we have the progress report. And since you do not have the possibility to try on so many different thing. Luckily, you have classmate. All participate in this class. So when they try something, you gain the information more. That part we designed the whole class activity.
+
+[SLIDE DESCRIPTION]
+<span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#D2E3FC;">Data:</span> The most important part in the whole process
+
+[TRANSCRIPT - 80:00]
+What is Data? Collection of data objects and their attributes. An attribute is a property or characteristic of an object. A collection of attributes also describes an object. <span class="lx-highlight" data-idx="1" style="background-color:#D2E3FC;">Object is also known as record, point, case, sample, entity, or tuple. So every row right here is related to record.</span>
+
+[TRANSCRIPT - 80:02]
+When you mentioned about data, you need to know most of data comes from database. <span class="lx-highlight" data-idx="2" style="background-color:#D2E3FC;">Currently, database still utilize relational database. When we told relational database is because they were having table. We call them relation. In the table, we have attribute. Each column of them are attribute. Each row we call them transaction or record. Depends on how you try to do that. Transaction is more for database. Turn saying that how many record tuple you can relate to it. You have the tuple or you can talking about point. So every row right here is related to record.</span>
+
+[SLIDE DESCRIPTION]
+What is Data?
+- Collection of data objects and their attributes
+- <span class="lx-highlight" data-idx="3" style="background-color:#D2E3FC;">An attribute is a property or characteristic of an object</span>
+- A collection of attributes also describes an object
+- Object is also known as record, point, case, sample, tuple, or instance
+
+[TRANSCRIPT - 80:50]
+And then right here, we want to talking about type of attribute. There are different types of attributes. By the way, the type right here is not data type. In computer science, if you learn data structure, you will have data type. But it is not data type. We are talking about different. So we have four different type: <span class="lx-highlight" data-idx="4" style="background-color:#D2E3FC;">Nominal, Ordinal, Interval, and Ratio.</span> And the ratio. How we partition those attribute depends on the operation that you are allowed to do. Okay. And then their data type right here. <span class="lx-highlight" data-idx="5" style="background-color:#D2E3FC;">Nominal is the one you can do last operation. Ratio is the one you can do all the operation that including nominal, ordinal, interval. Okay. So it depends on how many operation you can working with.</span> Here is another table. So then you can see that one is from minus to plus. So for each one of them, so <span class="lx-highlight" data-idx="6" style="background-color:#D2E3FC;">nominal data, you can only comparison equal or not equal. We call them categorical operation that only working on categorical data.</span> <span class="lx-highlight" data-idx="7" style="background-color:#D2E3FC;">Ordinal data, you can do comparison that including equal, not equal, less than, greater than.</span> <span class="lx-highlight" data-idx="8" style="background-color:#D2E3FC;">Interval data, you can do comparison that including equal, not equal, less than, greater than, and also addition and subtraction.</span> <span class="lx-highlight" data-idx="9" style="background-color:#D2E3FC;">Ratio data, you can do all the operation that including nominal, ordinal, interval.</span> Okay.
+
+[SLIDE DESCRIPTION]
+Types of Attributes
+- There are different types of attributes
+
+[SLIDE DESCRIPTION]
+<span class="lx-highlight" data-idx="10" style="background-color:#D2E3FC;">Categorical (=, !=)</span>
+<span class="lx-highlight" data-idx="11" style="background-color:#D2E3FC;">Rank Order (&lt;=,</span> &gt;=)
+<span class="lx-highlight" data-idx="12" style="background-color:#D2E3FC;">Interval (+, -)</span>
+<span class="lx-highlight" data-idx="13" style="background-color:#D2E3FC;">Proportional (x, /)</span>
+<span class="lx-highlight" data-idx="14" style="background-color:#D2E3FC;">True Zero</span>
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="14" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/15</span> |
+          Pos <span id="posInfo">[1714-1719]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "key_concept", "text": "Data: Collection of data objects and their attributes. An attribute is a property or characteristic of an object. A collection of attributes also describes an object.", "color": "#D2E3FC", "startPos": 1714, "endPos": 1719, "beforeText": "cipate in this class. So when they try something, you gain the information more. That part we designed the whole class activity.\n\n[SLIDE DESCRIPTION]\n", "extractionText": "Data:", "afterText": " The most important part in the whole process\n\n[TRANSCRIPT - 80:00]\nWhat is Data? Collection of data objects and their attributes. An attribute is a p", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Data and Attributes</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data is a collection of data objects and their attributes. An attribute is a property or characteristic of an object, and a collection of attributes describes an object.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Data is like a set of information about things (objects). Each thing has characteristics (attributes) that describe it.</span>}</div>"}, {"index": 1, "class": "key_concept", "text": "Object is also known as record, point, case, sample, entity, or tuple. So every row right here is related to record.", "color": "#D2E3FC", "startPos": 1962, "endPos": 2078, "beforeText": "of data objects and their attributes. An attribute is a property or characteristic of an object. A collection of attributes also describes an object. ", "extractionText": "Object is also known as record, point, case, sample, entity, or tuple. So every row right here is related to record.", "afterText": "\n\n[TRANSCRIPT - 80:02]\nWhen you mentioned about data, you need to know most of data comes from database. Currently, database still utilize relational ", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Object (in database context)</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">An object is also known as a record, point, case, sample, entity, or tuple. Every row in a table is related to a record.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">In databases, a row of data is called an object or record, representing a single item or event.</span>}</div>"}, {"index": 2, "class": "key_concept", "text": "Currently, database still utilize relational database. When we told relational database is because they were having table. We call them relation. In the table, we have attribute. Each column of them are attribute. Each row we call them transaction or record. Depends on how you try to do that. Transaction is more for database. Turn saying that how many record tuple you can relate to it. You have the tuple or you can talking about point. So every row right here is related to record.", "color": "#D2E3FC", "startPos": 2183, "endPos": 2668, "beforeText": "So every row right here is related to record.\n\n[TRANSCRIPT - 80:02]\nWhen you mentioned about data, you need to know most of data comes from database. ", "extractionText": "Currently, database still utilize relational database. When we told relational database is because they were having table. We call them relation. In the table, we have attribute. Each column of them are attribute. Each row we call them transaction or record. Depends on how you try to do that. Transaction is more for database. Turn saying that how many record tuple you can relate to it. You have the tuple or you can talking about point. So every row right here is related to record.", "afterText": "\n\n[SLIDE DESCRIPTION]\nWhat is Data?\n- Collection of data objects and their attributes\n- An attribute is a property or characteristic of an object\n- A ", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Relational Database</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">A database that uses tables (called relations) where each column is an attribute and each row is a transaction or record. A tuple or point refers to a row.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">A database organized into tables with rows and columns, where columns represent characteristics (attributes) and rows represent individual data entries (records).</span>}</div>"}, {"index": 3, "class": "key_concept", "text": "An attribute is a property or characteristic of an object", "color": "#D2E3FC", "startPos": 2756, "endPos": 2813, "beforeText": "ing about point. So every row right here is related to record.\n\n[SLIDE DESCRIPTION]\nWhat is Data?\n- Collection of data objects and their attributes\n- ", "extractionText": "An attribute is a property or characteristic of an object", "afterText": "\n- A collection of attributes also describes an object\n- Object is also known as record, point, case, sample, tuple, or instance\n\n[TRANSCRIPT - 80:50]", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Attribute</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">A property or characteristic of an object.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">An attribute is like a feature or a piece of information that describes an object or record.</span>}</div>"}, {"index": 4, "class": "key_concept", "text": "Nominal, Ordinal, Interval, and Ratio.", "color": "#D2E3FC", "startPos": 3284, "endPos": 3322, "beforeText": "ience, if you learn data structure, you will have data type. But it is not data type. We are talking about different. So we have four different type: ", "extractionText": "Nominal, Ordinal, Interval, and Ratio.", "afterText": " And the ratio. How we partition those attribute depends on the operation that you are allowed to do. Okay. And then their data type right here. Nomin", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Types of Attributes</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Four types of attributes: Nominal, Ordinal, Interval, and Ratio. The type depends on the operations allowed.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Intermediate</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">These are categories for describing data attributes, indicating what kind of mathematical operations can be performed on them.</span>}</div>"}, {"index": 5, "class": "key_concept", "text": "Nominal is the one you can do last operation. Ratio is the one you can do all the operation that including nominal, ordinal, interval. Okay. So it depends on how many operation you can working with.", "color": "#D2E3FC", "startPos": 3467, "endPos": 3665, "beforeText": "atio. And the ratio. How we partition those attribute depends on the operation that you are allowed to do. Okay. And then their data type right here. ", "extractionText": "Nominal is the one you can do last operation. Ratio is the one you can do all the operation that including nominal, ordinal, interval. Okay. So it depends on how many operation you can working with.", "afterText": " Here is another table. So then you can see that one is from minus to plus. So for each one of them, so nominal data, you can only comparison equal or", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Attribute Operations</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">The type of attribute (Nominal, Ordinal, Interval, Ratio) determines the operations that can be performed on it. Ratio attributes allow all operations, while Nominal attributes allow the fewest.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Intermediate</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Different types of data attributes allow for different mathematical operations. Ratio data is the most flexible, while nominal data is the least.</span>}</div>"}, {"index": 6, "class": "key_concept", "text": "nominal data, you can only comparison equal or not equal. We call them categorical operation that only working on categorical data.", "color": "#D2E3FC", "startPos": 3769, "endPos": 3900, "beforeText": "ds on how many operation you can working with. Here is another table. So then you can see that one is from minus to plus. So for each one of them, so ", "extractionText": "nominal data, you can only comparison equal or not equal. We call them categorical operation that only working on categorical data.", "afterText": " Ordinal data, you can do comparison that including equal, not equal, less than, greater than. Interval data, you can do comparison that including equ", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Nominal Data Operations</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">For nominal data, only equality comparisons (equal or not equal) are possible. These are called categorical operations.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Nominal data can only be used to check if two values are the same or different, like sorting items into categories.</span>}</div>"}, {"index": 7, "class": "key_concept", "text": "Ordinal data, you can do comparison that including equal, not equal, less than, greater than.", "color": "#D2E3FC", "startPos": 3901, "endPos": 3994, "beforeText": "h one of them, so nominal data, you can only comparison equal or not equal. We call them categorical operation that only working on categorical data. ", "extractionText": "Ordinal data, you can do comparison that including equal, not equal, less than, greater than.", "afterText": " Interval data, you can do comparison that including equal, not equal, less than, greater than, and also addition and subtraction. Ratio data, you can", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Ordinal Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data that can be compared using equal, not equal, less than, and greater than operators.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Ordinal data allows you to rank items, like &#x27;small&#x27;, &#x27;medium&#x27;, &#x27;large&#x27;, and know their order.</span>}</div>"}, {"index": 8, "class": "key_concept", "text": "Interval data, you can do comparison that including equal, not equal, less than, greater than, and also addition and subtraction.", "color": "#D2E3FC", "startPos": 3995, "endPos": 4124, "beforeText": "orical operation that only working on categorical data. Ordinal data, you can do comparison that including equal, not equal, less than, greater than. ", "extractionText": "Interval data, you can do comparison that including equal, not equal, less than, greater than, and also addition and subtraction.", "afterText": " Ratio data, you can do all the operation that including nominal, ordinal, interval. Okay.\n\n[SLIDE DESCRIPTION]\nTypes of Attributes\n- There are differ", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Interval Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data that supports comparison (equal, not equal, less than, greater than) and arithmetic operations like addition and subtraction.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Interval data has a defined order and the differences between values are meaningful, like temperature in Celsius.</span>}</div>"}, {"index": 9, "class": "key_concept", "text": "Ratio data, you can do all the operation that including nominal, ordinal, interval.", "color": "#D2E3FC", "startPos": 4125, "endPos": 4208, "beforeText": "than, greater than. Interval data, you can do comparison that including equal, not equal, less than, greater than, and also addition and subtraction. ", "extractionText": "Ratio data, you can do all the operation that including nominal, ordinal, interval.", "afterText": " Okay.\n\n[SLIDE DESCRIPTION]\nTypes of Attributes\n- There are different types of attributes\n\n[SLIDE DESCRIPTION]\nCategorical (=, !=)\nRank Order (&lt;=, &gt;=)", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Ratio Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data that supports all operations, including those for nominal, ordinal, and interval data.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Ratio data has a true zero point, meaning zero represents the absence of the quantity, and all arithmetic operations are meaningful, like height or weight.</span>}</div>"}, {"index": 10, "class": "key_concept", "text": "Categorical (=, !=)", "color": "#D2E3FC", "startPos": 4319, "endPos": 4338, "beforeText": "t including nominal, ordinal, interval. Okay.\n\n[SLIDE DESCRIPTION]\nTypes of Attributes\n- There are different types of attributes\n\n[SLIDE DESCRIPTION]\n", "extractionText": "Categorical (=, !=)", "afterText": "\nRank Order (&lt;=, &gt;=)\nInterval (+, -)\nProportional (x, /)\nTrue Zero\n", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Categorical Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data that can only be compared using equal and not equal operators.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Categorical data represents distinct groups or labels, like &#x27;red&#x27;, &#x27;blue&#x27;, or &#x27;green&#x27;.</span>}</div>"}, {"index": 11, "class": "key_concept", "text": "Rank Order (<=, >=", "color": "#D2E3FC", "startPos": 4339, "endPos": 4354, "beforeText": " ordinal, interval. Okay.\n\n[SLIDE DESCRIPTION]\nTypes of Attributes\n- There are different types of attributes\n\n[SLIDE DESCRIPTION]\nCategorical (=, !=)\n", "extractionText": "Rank Order (&lt;=,", "afterText": " &gt;=)\nInterval (+, -)\nProportional (x, /)\nTrue Zero\n", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Rank Order Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data that can be ordered using less than or equal to, and greater than or equal to operators.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">This refers to data where the order matters, but the exact differences between values might not be meaningful, similar to ordinal data.</span>}</div>"}, {"index": 12, "class": "key_concept", "text": "Interval (+, -)", "color": "#D2E3FC", "startPos": 4359, "endPos": 4374, "beforeText": "Okay.\n\n[SLIDE DESCRIPTION]\nTypes of Attributes\n- There are different types of attributes\n\n[SLIDE DESCRIPTION]\nCategorical (=, !=)\nRank Order (&lt;=, &gt;=)\n", "extractionText": "Interval (+, -)", "afterText": "\nProportional (x, /)\nTrue Zero\n", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Interval Data Operations</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Operations supported by interval data include addition and subtraction.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">With interval data, you can perform addition and subtraction, allowing you to find differences or sums between values.</span>}</div>"}, {"index": 13, "class": "key_concept", "text": "Proportional (x, /)", "color": "#D2E3FC", "startPos": 4375, "endPos": 4394, "beforeText": "SCRIPTION]\nTypes of Attributes\n- There are different types of attributes\n\n[SLIDE DESCRIPTION]\nCategorical (=, !=)\nRank Order (&lt;=, &gt;=)\nInterval (+, -)\n", "extractionText": "Proportional (x, /)", "afterText": "\nTrue Zero\n", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Proportional Data Operations</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Operations supported by proportional (ratio) data include multiplication and division.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Proportional data allows for multiplication and division, meaning ratios between values are meaningful.</span>}</div>"}, {"index": 14, "class": "key_concept", "text": "True Zero", "color": "#D2E3FC", "startPos": 4395, "endPos": 4404, "beforeText": "Attributes\n- There are different types of attributes\n\n[SLIDE DESCRIPTION]\nCategorical (=, !=)\nRank Order (&lt;=, &gt;=)\nInterval (+, -)\nProportional (x, /)\n", "extractionText": "True Zero", "afterText": "\n", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">True Zero</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">A characteristic of ratio data where zero represents the complete absence of the quantity being measured.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">A true zero means that the value &#x27;0&#x27; indicates that there is none of whatever is being measured, like having 0 dollars.</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
