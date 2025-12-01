@@ -4,4 +4,5 @@ config/.env
 .venv/
 *.bin
 *.gz
-
+/new_trained_model/*
+DM2025-Lab2-Exercise.code-workspace

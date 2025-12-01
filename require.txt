@@ -1,0 +1,29 @@
+# Core ML & DL
+tensorflow               # CPU version for Windows
+tensorflow-hub
+keras
+transformers
+sentence-transformers
+python-dotenv
+google-genai
+langextract
+gensim
+ollama
+langchain
+langchain_community
+langchain_core
+langchain-google-genai
+beautifulsoup4
+chromadb
+gradio
+jupyter
+scikit-learn
+pandas
+numpy
+matplotlib
+plotly
+seaborn
+nltk
+umap-learn
+pymupdf
+sentencepiece
